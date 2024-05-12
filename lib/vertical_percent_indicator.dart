@@ -79,14 +79,14 @@ class _VerticalBarIndicatorState extends State<VerticalBarIndicator> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const SizedBox(height: 5),
+        // const SizedBox(height: 5),
         widget.header != null
             ? Text(
                 widget.header!,
                 style: widget.headerStyle,
               )
             : const SizedBox.shrink(),
-        const SizedBox(height: 5),
+        // const SizedBox(height: 5),
         SizedBox(
           height: widget.height ?? 120,
           child: Stack(
