@@ -15,6 +15,7 @@ class VerticalBarIndicator extends StatefulWidget {
     this.headerStyle,
     this.footerStyle,
     this.animationDuration,
+    this.backgroundColor
   }) : super(key: key);
 
   ///Height of the indicator. Default is 120.
@@ -46,6 +47,8 @@ class VerticalBarIndicator extends StatefulWidget {
 
   ///Animation duration. Default is 2 seconds.
   final Duration? animationDuration;
+
+  final Color? backgroundColor;
 
   @override
   State<VerticalBarIndicator> createState() => _VerticalBarIndicatorState();
@@ -94,7 +97,7 @@ class _VerticalBarIndicatorState extends State<VerticalBarIndicator> {
                   height: widget.height ?? 120,
                   width: widget.width ?? 20,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: widget.backgroundColor ?? Colors.white,
                     borderRadius: BorderRadius.all(
                       Radius.circular(
                         widget.circularRadius ?? 20,
