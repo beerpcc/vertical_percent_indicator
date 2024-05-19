@@ -19,6 +19,7 @@ class VerticalBarIndicator extends StatefulWidget {
     this.animationCurve
   }) : super(key: key);
 
+  // Animation curve
   final Curve? animationCurve;
 
   ///Height of the indicator. Default is 120.
