@@ -15,8 +15,11 @@ class VerticalBarIndicator extends StatefulWidget {
     this.headerStyle,
     this.footerStyle,
     this.animationDuration,
-    this.backgroundColor
+    this.backgroundColor,
+    this.animationCurve
   }) : super(key: key);
+
+  final Curve? animationCurve;
 
   ///Height of the indicator. Default is 120.
   final double? height;
@@ -117,7 +120,7 @@ class _VerticalBarIndicatorState extends State<VerticalBarIndicator> {
               Align(
                 alignment: Alignment.bottomCenter,
                 child: AnimatedContainer(
-                  curve: Curves.linear,
+                  curve: animationCurve ?? Curves.linear,
                   duration: widget.animationDuration ??
                       const Duration(
                         seconds: 2,
