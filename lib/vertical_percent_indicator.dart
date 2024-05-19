@@ -120,7 +120,7 @@ class _VerticalBarIndicatorState extends State<VerticalBarIndicator> {
               Align(
                 alignment: Alignment.bottomCenter,
                 child: AnimatedContainer(
-                  curve: animationCurve ?? Curves.linear,
+                  curve: widget.animationCurve ?? Curves.linear,
                   duration: widget.animationDuration ??
                       const Duration(
                         seconds: 2,
